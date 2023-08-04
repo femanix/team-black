@@ -9,6 +9,7 @@ class CreateStudents < ActiveRecord::Migration[7.0]
       t.integer :rg, limit: 8
       t.string :email
       t.string :gender
+      t.integer :cep, limit: 8
 
       t.timestamps
     end
