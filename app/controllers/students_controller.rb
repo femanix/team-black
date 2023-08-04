@@ -19,7 +19,16 @@ class StudentsController < AuthsController
 
   # GET /students/1
   def show
-    render json: @student
+    render json: @student.as_json(
+      include: {
+        plan: {
+          only: [:description, :value],
+          include: {
+            modality: { only: [:description]}
+          }
+        }
+      }
+    )
   end
 
   # POST /students
