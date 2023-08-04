@@ -5,7 +5,16 @@ class StudentsController < AuthsController
   def index
     @students = Student.all
 
-    render json: @students
+    render json: @students.as_json(
+      include: {
+        plan: {
+          only: [:description, :value],
+          include: {
+            modality: { only: [:description]}
+          }
+        }
+      }
+    )
   end
 
   # GET /students/1
