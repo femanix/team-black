@@ -1,4 +1,5 @@
-
+require 'faker'
+require 'cpf_cnpj'
 GENDER = ['M','F'].sample
 
 namespace :dev do
