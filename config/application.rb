@@ -39,6 +39,6 @@ module TeamBlack
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options, :head]
-      e
+      end
   end
 end
