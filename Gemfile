@@ -50,5 +50,10 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'rerun'
+  gem "capistrano", "~> 3.17", require: false
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-bundler', '~> 1.5'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rbenv'
 end
 
