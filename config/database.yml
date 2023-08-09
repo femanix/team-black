@@ -61,8 +61,3 @@ production:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: team_black_production
-  username: team_black
-  password: <%= ENV["TEAM_BLACK_DATABASE_PASSWORD"] %>
