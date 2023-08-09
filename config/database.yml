@@ -32,7 +32,7 @@ test:
   host: db-aws-urupa-arena.cjqkmibl8mwv.us-east-2.rds.amazonaws.com
   port: 3306
 
-test:
+production:
   <<: *default
   database: team_black_test
   username: root
