@@ -207,6 +207,7 @@ DEPENDENCIES
   bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap
   capistrano (~> 3.17)
+  capistrano-bundler (~> 1.5)
   capistrano-rails (~> 1.4)
   capistrano-rbenv
   capistrano3-unicorn

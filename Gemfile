@@ -52,7 +52,7 @@ group :development do
   gem 'rerun'
   gem "capistrano", "~> 3.17", require: false
   gem 'capistrano3-unicorn'
- # gem 'capistrano-bundler', '~> 1.5'
+  gem 'capistrano-bundler', '~> 1.5'
   gem 'capistrano-rails', '~> 1.4'
   gem 'capistrano-rbenv'
 end
