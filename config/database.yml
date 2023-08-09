@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: Cl1@
-  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
   database: team_black_development
+  username: root
+  password: Cl1@
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,13 +33,14 @@ test:
   port: 3306
 
 production:
-  <<: *default
   database: team_black_test
   username: root
   password: fsTAS2jypkeT3orT7DBf
   host: db-aws-urupa-arena.cjqkmibl8mwv.us-east-2.rds.amazonaws.com
   port: 3306
-
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  socket: /var/run/mysqld/mysqld.sock
+  
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
